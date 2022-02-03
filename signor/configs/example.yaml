@@ -1,0 +1,82 @@
+# test whether use acc helps or not
+
+python:
+  dtype: str
+  values:
+  - OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 ~/anaconda3/envs/learning_to_simulate/bin/python
+#  - ~/anaconda3/envs/learning_to_simulate/bin/python
+
+file:
+  dtype: str
+  values:
+  - graph/physics/learning_to_simulate/torch_model/test_deepmind.py
+
+noacc:
+  dtype: bool
+  values:
+  - True
+  - False
+
+
+seed:
+  dtype: int
+  values:
+  - 1
+  - 2
+
+equiv:
+  dtype: bool
+  values:
+  - True
+
+
+dataset:
+  dtype: str
+  values:
+  - Spring
+
+mode:
+  dtype: str
+  values:
+  - one_step
+
+n_epoch:
+  dtype: int
+  values:
+  - 5000
+
+lr:
+  dtype: float
+  values:
+  - 1e-3
+
+dev:
+  dtype: str
+  values:
+  - cuda
+
+# data args
+n:
+  dtype: int
+  values:
+  - 8
+
+d:
+  dtype: int
+  values:
+  - 3
+
+n_systems:
+  dtype: int
+  values:
+  - 100
+
+traj_len:
+  dtype: int
+  values:
+  - 100
+
+delta_t:
+  dtype: float
+  values:
+  - 0.005

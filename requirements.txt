@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+wandb
+termcolor
+colorama
+pyyaml
+memory_profiler
+scipy
+gpustat
+torch
+numpy

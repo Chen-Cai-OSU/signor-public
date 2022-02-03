@@ -1,0 +1,6 @@
+# test whether use acc helps or not
+
+python: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 ~/anaconda3/envs/learning_to_simulate/bin/python
+file: graph/physics/learning_to_simulate/torch_model/test_deepmind.py
+noacc: [True, False]
+delta_t: 0.005
